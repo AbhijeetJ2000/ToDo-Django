@@ -5,6 +5,7 @@ from .models import Task
 class TaskAdmin(admin.ModelAdmin):
     list_display = ('task', 'is_completed', 'created_at', 'updated_at')
     search_fields = ('task',)
+    list_editable = ('is_completed',)
 
 admin.site.register(Task, TaskAdmin)
 
